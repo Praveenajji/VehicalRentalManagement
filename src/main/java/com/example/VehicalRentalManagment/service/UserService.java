@@ -43,11 +43,8 @@ public class UserService {
 		}
 	}
 
+	
 	public User updateUser(User user) {
-		
-//		return userRepository.findById(user.getUserId()).map(userRepository::save).orElseThrow();
-		
-		
 	Optional<User> optional=	userRepository.findById(user.getUserId());
 	if(optional.isPresent()) {
 		
