@@ -2,5 +2,7 @@ package com.example.VehicalRentalMnanagement.enums;
 
 public enum UserRole {
 CONSUMER,
-RENTING_PARTNER;
+RENTAL_PARTNER;
+	
+
 }
