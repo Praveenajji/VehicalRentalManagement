@@ -1,5 +1,7 @@
 package com.example.VehicalRentalManagment.entity;
 
+
+
 import com.example.VehicalRentalMnanagement.enums.UserRole;
 
 import jakarta.persistence.Entity;
