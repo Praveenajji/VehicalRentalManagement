@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.VehicalRentalManagment.entity.User;
 import com.example.VehicalRentalManagment.service.UserService;
 import com.example.VehicalRentalManagment.util.ResponseStructure;
-//instead of annotating @Controller and @ResposeBody we can use @RestController
+
 @RestController
 public class UserController {
 
@@ -28,8 +28,6 @@ public class UserController {
 	}
 
 	@PostMapping("/save-user")
-//	@ResponseBody
-//	public User saveUser(@ModelAttribute User user) {
 	public ResponseStructure<User> saveUser(@RequestBody User user) {
 	 	user =userService.saveUser(user);
 	 	return ResponseStructure.create(HttpStatus.CREATED.value(), "User created", user);
@@ -37,9 +35,9 @@ public class UserController {
 	
 	@GetMapping("/find-user")
 	public User findUser( @RequestParam int userId) {
-		
 		return userService.findUser(userId);
 	}
+	
 	
 	@DeleteMapping("/delete-user")
 	public User deleteUser( @RequestParam int userId) {

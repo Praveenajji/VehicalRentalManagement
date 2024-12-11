@@ -1,5 +1,7 @@
 package com.example.VehicalRentalManagment.entity;
 
+import com.example.VehicalRentalMnanagement.enums.UserRole;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,7 +15,30 @@ public class User {
 	private int userId;
 	private String username;
 	private String email;
-	private int password;
+	private String password;
+	private UserRole role;
+	private String phoneNumber;
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	
+	
+	public UserRole getRole() {
+		return role;
+	}
+	public void setRole(UserRole role) {
+		this.role = role;
+	}
+	public String getProfilePicture() {
+		return profilePicture;
+	}
+	public void setProfilePicture(String profilePicture) {
+		this.profilePicture = profilePicture;
+	}
+	private String profilePicture;
 	public int getUserId() {
 		return userId;
 	}
@@ -32,12 +57,7 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getPassword() {
-		return password;
-	}
-	public void setPassword(int password) {
-		this.password = password;
-	}
+	
 	
 	
 	
